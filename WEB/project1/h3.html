@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <h1> employ records<br></h1>
+        <link rel="stylesheet" href="style.css"></script>
+
+    </head>
+    <body>
+        emter employ id<input type="text" id ="p"name ="records">
+        <button id ="btn" onclick="getdata()">submit</button>
+        <div class="main-list" id="list_div">
+            <!-- <div class="list-items"> -->
+            
+            </div>
+    
+            </div>
+            <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
+            <script>
+		
+                // Your web app's Firebase configuration
+                // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+                var firebaseConfig = {
+                  apiKey: "AIzaSyBET_BuKrbhp_GRVGPauCYPiUxU55EeNq0",
+                  authDomain: "tcs-wealth.firebaseapp.com",
+                  projectId: "tcs-wealth",
+                  storageBucket: "tcs-wealth.appspot.com",
+                  messagingSenderId: "521944648287",
+                  appId: "1:521944648287:web:29fc4600c9bb12681429ea",
+                  measurementId: "G-CTFEH53TNR"
+                };
+                // Initialize Firebase
+                firebase.initializeApp(firebaseConfig);
+                firebase.analytics();
+                
+              </script>
+             
+            
+        <script>
+             var db=firebase.firestore();
+		const list_div=document.querySelector("#list_div");
+		//document.write("");	
+		//document.write("");
+		//document.write("");
+          function getdata(){
+              var val=document.getElementById("p").value;
+
+          
+          db.collection("users").doc(val).collection("Parameters").get().then((querySnapshot)=>{
+			querySnapshot.forEach((doc)=>{
+            
+            data=doc.data()["Data"][0]
+
+			// console.log(datalen.lenght)
+
+			list_div.innerHTML += "<div class='list-items'>bodyTemparature :<h13>" + data.bodyTemparature+ "</h13><br>electroCardiogram :<h8>" + data.electroCardiogram+ "</h8><br>glucose         :<h9>" + data.glucose+ "</h9><br>heartRate  :<h10>" + data.heartRate+ "</h10><br>oxygenSaturation:<h11>" + data.oxygenSaturation+ "</h11><br>resperation              :<h12>" + data.respiration+ "</h12><br>bp                         :<h14>" + data.bp+ "</h14></div>"
+         });
+	});
+}
+            
+
+            
+         </script>
+          
+    </body>
+</html>

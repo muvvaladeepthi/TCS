@@ -1,0 +1,60 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-image:url("bg9.jpg");
+	 background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-decoration: chocolate;
+  background-size:cover;
+}
+h1{
+	color: white;
+}
+.list-items{
+	display: inline-block;
+	 margin:20px; 
+	 text-align: left;
+	 width: 25%;
+     padding: 20px;
+     border-radius: 25px;
+	 background-color:rgb(233, 237, 241);
+	
+
+}
+
+
+
+h2{
+	color: rgb(5, 5, 26);
+	
+	font-size: 20px;
+}
+h3{
+	color: rgb(5, 5, 26);	
+	font-size: 20px;
+}
+h4{
+	color: rgb(5, 5, 26);	
+	font-size: 20px;
+}
+h5{
+	color: rgb(5, 5, 26);	
+	font-size: 20px;
+}
+h6{
+	color: rgb(5, 5, 26);	
+	font-size: 20px;
+}
+.employ {
+	background-color: #69a8cc;
+	border-radius: 100%;
+  }
+  a {
+	text-decoration: none;
+	display: inline-block;
+	padding: 8px 16px;
+	
+	
+	
+  }
+  

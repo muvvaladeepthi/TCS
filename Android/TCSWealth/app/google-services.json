@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "521944648287",
+    "project_id": "tcs-wealth",
+    "storage_bucket": "tcs-wealth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521944648287:android:40e05d358db99bbf1429ea",
+        "android_client_info": {
+          "package_name": "com.example.tcswealth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "521944648287-cef0qiv6f93lt0tm1kf8l7rgholami7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeJnDeh1Uzstxg069BSSkgk7UhW968K6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "521944648287-cef0qiv6f93lt0tm1kf8l7rgholami7e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

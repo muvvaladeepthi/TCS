@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TCS Wealth</string>
+
+    <string name="_0">0</string>
+    <string name="tcs_wellness">TCS WELLNESS</string>
+    <string name="show_uploads">Show Uploads</string>
+    <string name="choose_file">Choose file</string>
+    <string name="enter_file_name">Enter file name</string>
+    <string name="todo">TODO</string>
+    <string name="upload">com.example.tcswealth.Upload</string>
+</resources>

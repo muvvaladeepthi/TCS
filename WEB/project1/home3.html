@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<h1>TCS  WEALTH</h1>
+
+
+	<scri><link rel="stylesheet" href="style.css"></script>
+</head>
+<body> 
+
+	 <a href="h3.html" class="employ">employ doc</a>
+		
+
+	<div class="main-list" id="list_div">
+		 <!-- <div class="list-items"> -->
+		
+		</div>
+
+		</div>
+		<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
+		
+	<script>
+		
+		// Your web app's Firebase configuration
+		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+		var firebaseConfig = {
+		  apiKey: "AIzaSyBET_BuKrbhp_GRVGPauCYPiUxU55EeNq0",
+		  authDomain: "tcs-wealth.firebaseapp.com",
+		  projectId: "tcs-wealth",
+		  storageBucket: "tcs-wealth.appspot.com",
+		  messagingSenderId: "521944648287",
+		  appId: "1:521944648287:web:29fc4600c9bb12681429ea",
+		  measurementId: "G-CTFEH53TNR"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		firebase.analytics();
+		
+	  </script>
+	 
+	  
+	<script>
+	    var db=firebase.firestore();
+		const list_div=document.querySelector("#list_div");
+		//document.write("");	
+		//document.write("");
+		//document.write("");
+		db.collection("users").get().then((querySnapshot)=>{
+			querySnapshot.forEach((doc)=>{
+			console.log(doc.data()),
+			list_div.innerHTML += "<div class='list-items'>Name:<h2>" + doc.data().Name+ "</h2><br>Dob:<h3>" + doc.data().dob+"</h3><br>E-mail:<h4>"+doc.data().email+"</h4><br>Phone:<h5>"+doc.data().phone+"</h5></div>"
+			
+		});
+		
+	
+		});
+
+		
+		//db.collection(val).get().then((querySnapshot)=>{
+		//querySnapshot.forEach((doc)=>{
+	    //document.write("<br></br>");
+	   //list_div.innerHTML+="<div class='list-item'><tr>"+document.write(doc.data().Parameters)"</tr>  <div>"
+	//	})})</script>
+    </body> 
+
+
+
+</html>
